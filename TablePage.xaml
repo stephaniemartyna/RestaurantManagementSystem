@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestaurantManagementSystem.TablePage"
+             Title="Table">
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button
+            Text="Dine In"
+            TextColor="Black"
+            FontAttributes="Bold"
+            BorderColor="#FFAF50"
+            BorderWidth="5"
+            BackgroundColor="White"
+            Margin="110, 20, 130, 5"
+            Grid.Column="0"
+            Grid.ColumnSpan="6"
+            Grid.Row="0"/>
+
+        <Button
+            Text="Take out"
+            TextColor="Black"
+            FontAttributes="Bold"
+            BorderColor="#FFAF50"
+            BorderWidth="5"
+            BackgroundColor="White"
+            Margin="130, 20,110, 5"
+            Grid.Column="6"
+            Grid.ColumnSpan="6"
+            Grid.Row="0"
+            Clicked="TakeOutButton_Clicked"/>
+
+        <Button
+            x:Name="TableButton"
+            Margin="20"
+            Text="6 Or More"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Grid.Column="1"
+            Grid.ColumnSpan="4"
+            Grid.Row="1"
+            Grid.RowSpan="3"
+            Clicked="TableClicked"/>
+
+        <Button
+            Text="1"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="5"
+            Grid.ColumnSpan="1"
+            Grid.Row="2"
+            Grid.RowSpan="2"
+            Clicked="TableClicked"/>
+
+        <Button
+            Text="1"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="6"
+            Grid.ColumnSpan="1"
+            Grid.Row="2"
+            Grid.RowSpan="2"
+            Clicked="TableClicked"/>
+
+        <Button
+            Text="1"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="7"
+            Grid.ColumnSpan="1"
+            Grid.Row="2"
+            Grid.RowSpan="2"
+            Clicked="TableClicked"/>
+
+        <Button
+            Text="1"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="8"
+            Grid.ColumnSpan="1"
+            Grid.Row="2"
+            Grid.RowSpan="2"
+            Clicked="TableClicked"/>
+        
+        <Button
+            Text="4"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Grid.Row="4"
+            Grid.RowSpan="3"
+            Clicked="TableClicked"/>
+
+        <Button
+            Text="4"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="4"
+            Grid.ColumnSpan="2"
+            Grid.Row="4"
+            Grid.RowSpan="3"
+            Clicked="TableClicked"/>
+
+        <Button
+            Text="4"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="6"
+            Grid.ColumnSpan="2"
+            Grid.Row="4"
+            Grid.RowSpan="3"
+            Clicked="TableClicked"/>
+
+        <Button
+            Text="4"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            Grid.Row="7"
+            Grid.RowSpan="3"
+            Clicked="TableClicked"/>
+
+        <Button
+            Text="4"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="4"
+            Grid.ColumnSpan="2"
+            Grid.Row="7"
+            Grid.RowSpan="3"
+            Clicked="TableClicked"/>
+
+        <Button
+            Text="4"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="6"
+            Grid.ColumnSpan="2"
+            Grid.Row="7"
+            Grid.RowSpan="3"
+            Clicked="TableClicked"/>
+
+        <Button 
+            Text="2"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="8"
+            Grid.ColumnSpan="2"
+            Grid.Row="4"
+            Grid.RowSpan="2"
+            Clicked="TableClicked"/>
+
+        <Button 
+            Text="2"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="8"
+            Grid.ColumnSpan="2"
+            Grid.Row="6"
+            Grid.RowSpan="2"
+            Clicked="TableClicked"/>
+
+        <Button 
+            Text="6 Or More"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="20"
+            Grid.Column="8"
+            Grid.ColumnSpan="2"
+            Grid.Row="8"
+            Grid.RowSpan="8"
+            Clicked="TableClicked"/>
+    </Grid>
+</ContentPage>

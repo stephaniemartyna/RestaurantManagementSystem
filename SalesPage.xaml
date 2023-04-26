@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestaurantManagementSystem.SalesPage"
+             Title="Sales Report">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label Text="Daily Sales"
+               FontSize="32"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Grid.Row="0"
+               Margin="0,0,0,30"/>
+
+        <ListView x:Name="SalesListView"
+                  Grid.Row="1"
+                  HasUnevenRows="True">
+            <ListView.Header>
+                <Grid ColumnSpacing="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Item Name"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Grid.Column="0"/>
+                    <Label Text="Quantity Sold"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Grid.Column="1"/>
+                    <Label Text="Sales Amount"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Grid.Column="2"/>
+                </Grid>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid ColumnSpacing="20"
+                                  Padding="0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <BoxView Grid.ColumnSpan="3" HeightRequest="1" BackgroundColor="Black" VerticalOptions="End" Margin="0,5,0,0"/>
+
+                                <BoxView WidthRequest="1" BackgroundColor="Black" HorizontalOptions="End" Grid.Column="0" />
+                                <BoxView WidthRequest="1" BackgroundColor="Black" HorizontalOptions="End" Grid.Column="1" />
+
+                                <Label Text="{Binding Name}"
+                                       FontSize="16"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       Grid.Column="0"/>
+                                <Label Text="{Binding QuantitySold}"
+                                       FontSize="16"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       Grid.Column="1"/>
+                                <Label Text="{Binding TotalSalesAmount, StringFormat='{0:C}'}"
+                                       FontSize="16"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       Grid.Column="2"/>
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+            <ListView.Footer>
+                <Grid BackgroundColor="AntiqueWhite" Padding="0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Total Sales Price"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Column="0"/>
+
+                    <Label Text="{Binding TotalSalesPrice, StringFormat='{0:C}'}"
+                           FontSize="16"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Grid.Column="1"/>
+                </Grid>
+            </ListView.Footer>
+        </ListView>
+    </Grid>
+</ContentPage>

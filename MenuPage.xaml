@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestaurantManagementSystem.MenuPage"
+             Title="Menu">
+    
+    <Grid BackgroundColor="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="250" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Menu items layout -->
+            <!-- Burger image and button -->
+            <Image Source="hamburger_meal.jpg"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   Grid.Row="0"
+                   Grid.Column="0" />
+            
+            <Button Text="Burger and Fries"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFAF50"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    Clicked="MenuItem_Clicked"
+                    Margin="10,-35,10,10"/>
+
+            <!-- Ribs image and button -->
+            <Image Source="pork_backrip.jpg"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   Grid.Row="0"
+                   Grid.Column="1" />
+            
+            <Button Text="Pork back-ribs"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFAF50"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    Clicked="MenuItem_Clicked"
+                    Margin="10,-35,10,10"/>
+
+            <!-- Chicken Nuggets image and button -->
+            <Image Source="chicken_nugget.jpg"
+                   HeightRequest="180"
+                   WidthRequest="170"
+                   Grid.Row="0"
+                   Grid.Column="2" />
+            
+            <Button Text="Chicken Nuggets"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFAF50"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    Clicked="MenuItem_Clicked"
+                    Margin="10,-35,10,10"/>
+
+            <!-- Tacos image and button -->
+            <Image Source="tacos.jpg"
+                   HeightRequest="210"
+                   WidthRequest="210"
+                   Grid.Row="0"
+                   Grid.Column="4" />
+            
+            <Button Text="Tacos"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFAF50"
+                    Grid.Column="3"
+                    Grid.Row="1"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    Clicked="MenuItem_Clicked"
+                    Margin="10,-35,10,10"/>
+
+            <!-- Pizza image and button -->
+            <Image Source="pizza.jpg"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   Grid.Row="2"
+                   Grid.Column="0" />
+            <Button Text="Pizza"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFAF50"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    Clicked="MenuItem_Clicked"
+                    Margin="10,-35,10,10"/>
+
+            
+            <!--Drink items layout-->
+            <!-- Coke image and button -->
+            <Image Source="coke.png"
+                   HeightRequest="150"
+                   WidthRequest="200"
+                   Grid.Row="2"
+                   Grid.Column="1" />
+            <Button Text="Coca-Cola"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFAF50"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    Clicked="MenuItem_Clicked"
+                    Margin="10,-35,10,10"/>
+
+            <!-- Coffee image and button -->
+            <Image Source="coffee.jpg"
+                   HeightRequest="150"
+                   WidthRequest="200"
+                   Grid.Row="2"
+                   Grid.Column="2" />
+            <Button Text="Coffee"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFAF50"
+                    Grid.Column="2"
+                    Grid.Row="3"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    Clicked="MenuItem_Clicked"
+                    Margin="10,-35,10,10"/>
+
+            <!-- Water image and button -->
+            <Image Source="water.jpg"
+                   HeightRequest="150"
+                   WidthRequest="200"
+                   Grid.Row="2"
+                   Grid.Column="3" />
+            <Button Text="Water"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    BackgroundColor="#FFAF50"
+                    Grid.Column="3"
+                    Grid.Row="3"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    Clicked="MenuItem_Clicked"
+                    Margin="10,-35,10,10"/>
+        </Grid>
+
+        <!-- Checkout box layout-->
+        <Grid Grid.Column="1" BackgroundColor="AntiqueWhite" Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label
+                Text="Checkout"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Margin="0, 10, 0, 10"/>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Text="Food name"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    Grid.Row="0"
+                    Margin="20, 10, 0, 10"/>
+                <Label
+                    Text="Price"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="-20, 10, 0, 10"/>
+
+                <ListView
+                x:Name="checkoutItemsListView"
+                Grid.Row="1"
+                Grid.ColumnSpan="3">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Name}" />
+                                    <Label Text="{Binding Price, StringFormat='{0:C}'}"
+                                       Grid.Column="1"
+                                       HorizontalTextAlignment="Start" />
+
+                                    <!-- Delete Button -->
+                                    <Button Text="X" Grid.Column="2"
+                                        BackgroundColor="#FFAF50"
+                                        TextColor="White"
+                                        Clicked="DeleteItemButton_Clicked"
+                                        CommandParameter="{Binding .}"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+            <Label
+                x:Name="TotalAmountLabel"
+                Text="Total Amount:"
+                FontSize="18"
+                FontAttributes="Bold"
+                Grid.Row="2" 
+                Margin="20, 10, 0, 10"/>
+
+            <Button
+                Text="Confirm Order"
+                BackgroundColor="#FFAF50"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Clicked="ConfirmOrderButton_Clicked"
+                Grid.Row="3" />
+        </Grid>
+    </Grid>
+</ContentPage>

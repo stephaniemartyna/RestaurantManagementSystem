@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestaurantManagementSystem.LoginPage">
+    <Grid Padding="50">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Log in"
+               FontSize="32"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Grid.Row="0"
+               Grid.Column="2"
+               Margin="0,0,0,30"/>
+
+        <Image Source="burger.png"
+               HeightRequest="70"
+               WidthRequest="60"
+               HorizontalOptions="Center"
+               Grid.Row="1"
+               Grid.Column="2"
+               Margin="0,0,0,20"/>
+
+        <Label Text="Welcome to Burger Restaurant!"
+               FontSize="20"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               Grid.Row="2"
+               Grid.Column="2"
+               Margin="0,0,0,40"/>
+
+        <Entry x:Name="UsernameEntry"
+               HeightRequest="40"
+               WidthRequest="200"
+               HorizontalTextAlignment="Center"
+               Grid.Row="3"
+               Grid.Column="2"
+               Placeholder="Employee ID"
+               TextColor="Black"
+               BackgroundColor="White"/>
+
+        <Entry x:Name="PasswordEntry"
+               HeightRequest="40"
+               WidthRequest="200"
+               Grid.Row="4"
+               Grid.Column="2"
+               HorizontalTextAlignment="Center"
+               Placeholder="Password"
+               TextColor="Black"
+               IsPassword="True"
+               BackgroundColor="White" 
+               Margin="0,0,0,20"/>
+        <Button Text="Log in"
+                HeightRequest="40"
+                WidthRequest="100"
+                Grid.Row="5"
+                Grid.Column="2"
+                TextColor="Black"
+                FontAttributes="Bold"
+                Clicked="OnLoginClicked" />
+
+        <Button Text="Add user"
+                HeightRequest="40"
+                WidthRequest="110"
+                Grid.Column="1"
+                Grid.Row="8"
+                Clicked="OnAddUserClicked"
+                BackgroundColor="White"
+                TextColor="Black"/>
+
+        <Button Text="Edit user"
+                HeightRequest="40"
+                WidthRequest="110"
+                Grid.Row="8"
+                Grid.Column="2"
+                Clicked="OnEditUserClicked"
+                BackgroundColor="White"
+                TextColor="Black"/>
+
+        <Button Text="Delete user"
+                HeightRequest="40"
+                WidthRequest="110"
+                Grid.Row="8"
+                Grid.Column="3"
+                Clicked="OnDeleteUserClicked"
+                BackgroundColor="White"
+                TextColor="Black"/>
+    </Grid>
+</ContentPage>
