@@ -7,10 +7,11 @@
 
     <TabBar x:Name="TabBar">
         <ShellContent
-            x:Name="LoginPage "
+            x:Name="LoginPage"
             Title="Login"
             ContentTemplate="{DataTemplate local:LoginPage}"
-            Route="Login" />
+            Route="Login" 
+            Shell.TabBarIsVisible="False"/>
         <ShellContent
             x:Name="TablePage"
             Title="Table"
